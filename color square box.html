@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Animation
+</title>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+ $(document).ready(function()
+{
+    $("button").click(function()
+             {
+             $("div").animate({top:"+=200px"
+
+
+              
+},
+function(){ $("div").css("background-color","blue");});  
+
+ $("div").animate({left:"200px"
+              
+},function(){ $("div").css("background-color","yellow");});   
+
+ $("div").animate({top :"-=200px"
+             
+},function(){ $("div").css("background-color","green");});  
+
+ $("div").animate({left:"-=200px"
+},function(){ $("div").css("background-color","red");}); 
+
+
+});
+});
+</script>
+<style>
+  div{
+   width:200px;
+    height:100px;
+     position:absolute;
+     background-color:red;
+ }
+</style>
+</head>
+<body>
+
+<button>click here</button>
+<div></div>
+<br>
+<br>
+
+</body>
+</html>

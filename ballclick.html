@@ -1,0 +1,39 @@
+  <!DOCTYPE html>
+<html>      
+<head>
+    <title>
+        Ball Game
+    </title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+  $(this).on("click", function(e) {
+    var x = e.clientX-14;
+    var y = e.clientY-14;
+    var el = $("#circle");
+    el.css('position', 'absolute');
+    el.css("left", x);
+    el.css("top", y);
+  })
+})
+    </script>
+    <style>
+        #circle{
+            color:tomato;
+            background-color:red;
+            width: 100px;
+            height:100px;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+<body onmousemove="moveDivs(event)">
+    <div id="circle"></div>
+    <p id="res"></p>
+   </body>
+</html>
+

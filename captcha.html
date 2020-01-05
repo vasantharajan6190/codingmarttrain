@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Captcha Marker</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		body{
+			background-image: url("https://images.pexels.com/photos/2822949/pexels-photo-2822949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: top center;
+		}
+		html,body{
+			height: 100%;
+		}
+		h1{
+			color:rgba(0, 94, 255, 1);
+			font-size: 50px;
+			padding-top: 20px;
+			width:40%;
+			font-weight: 700;
+			}
+			h5{
+				color:rgba(220, 56, 56, 1);
+				margin: 10px;
+			}
+		.box{
+			padding-left: 500px;
+		}
+		#submit{
+			width:25%;
+			margin-left: 520px;
+
+		}
+		#create{
+			width:16%;
+		}
+		input[type="date"]{
+  border: 2px solid blue;
+  border-radius: 4px;
+  width:35%;
+}
+		input[type=text]{
+  border: 2px solid blue;
+  border-radius: 4px;
+  width:35%;
+}
+#correct{
+	color:red;
+}
+.field
+{
+	font-size: 18px;
+	color:red;
+	margin-right: 7px;
+	font-weight: 600;
+}
+
+	</style>
+	
+</head>
+<body onload="create()">
+	<div class="container-fluid">
+			<center><h1>CAPTCHA CHECKER</h1></center>
+			<br>
+			<br>
+		 <marquee width="60%" direction="right" height="100px">To open GOOGLE home page verify captcha</marquee>
+		 <br>
+		 <br>
+		 	<div class="box">
+		 	 <div class="form-group">
+		 	 	<span class="field">Name:  </span>
+		 	 	<input type="text" name="name" required>
+		 	 	<br>
+		 	 	<br>
+		 	 	<span class="field">D.O.B:  </span>
+		 	 	<input type="date" name="dob">
+		 	 	<br>
+		 	 	<br>
+		 	 	<span class="field">Sex:  </span>
+		 	 	<input type="radio" name="gender" value="gender"><span class="field">Male</span>
+		 	 	<input type="radio" name="gender" value="gender"><span class="field">Female</span>
+		 	 	<br>
+		 	 	<br>
+		 	<div class="form-group">
+                   <input type="text" class="col-3" id="captcha" class="form-control">
+                   <button id="create" class="btn btn-warning">Create New</button>
+		 	</div>
+		 	 <br>
+
+		 	<div class="form-group">
+<input style="margin-bottom: 6px;" type="text" class="col-7" id="user" class="form-control">
+<p id="correct"></p>
+		 	</div>
+     	 </div>
+    <br>
+		 </div>
+		</div>
+		<button id="submit" class="btn btn-success text-center">Submit</button>
+    
+     <script>
+     	function create(){
+     		var create = Math.random().toString(36).substring(2, 6) + Math.random().toString(36).substring(2, 6);
+         document.getElementById("captcha").value=create;
+     	}
+		document.getElementById("create").addEventListener("click",function(){
+         var create = Math.random().toString(36).substring(2, 6) + Math.random().toString(36).substring(2, 6);
+         document.getElementById("captcha").value=create;
+        
+         document.getElementById("submit").addEventListener("click",function(){
+         	 var user = document.getElementById("user").value;
+         	if (user===create){
+         		window.location.href = "https://www.google.com/";
+         	}
+         	else{
+         		document.getElementById("correct").innerHTML="Wrong Captcha enter correctly";
+         	}
+         });
+		});
+
+	</script>
+</body>
+</html>

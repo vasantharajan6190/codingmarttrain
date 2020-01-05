@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle button</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+	<style>
+		.cardinal{
+		background-color: rgb(196, 30, 58);
+		}
+		#center{
+			 max-width: 500px;
+             margin: auto;
+		}
+		#color,#border,#box{
+			font-weight: 600;
+			padding: 5px;
+			margin:5px;
+			font-size: 17px;
+		}
+	</style>
+</head>
+<body>
+	<p class="display-3 jumbotron container-fluid text-center text-primary"> TOGGLING OPTIONS</p>
+	<div id="center">
+			<button id="color">Toggle colors</button>
+	<button id="border">Toggle Rounded borders</button>
+	<button id="box">Add new box</button>
+	<br>
+	<br>
+	<ul class="form-group">
+		<div id="toggle"><input type="text"></div>
+	</ul>
+	</div>
+	
+<script>
+   $(document).ready(function(){
+   	$("#color").click(function(){
+   		$("button").toggleClass("cardinal")
+   	});
+   	$("#border").click(function(){
+   		$("button").toggleClass("rounded-circle");
+   	});
+   	$("#box").click(function(){
+   		$("ul").append("<input type='text' class='form-control border border-danger'/><br>");
+   	});
+   });
+</script>
+</body>
+</html>
