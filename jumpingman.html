@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jumping Man</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function(){
+     	var z =0;
+     	while(z===0){
+     	for(var i=0;i<=16;i++){
+            $(".sample").show().animate({left:"-=82px"});
+            if(i===13|| i===14){
+              $("img").animate({bottom:"99px"});
+            }
+            else{
+                $("img").animate({bottom:"0px"});	
+            }
+     	};
+     	z+=1;
+     };
+     while(z===1){
+     	for(var j=0;j<=42;j++){
+            $(".sample2").show().animate({left:"-=81px"});
+             if(j===21| j==22){
+              $("img").animate({bottom:"199px"});
+            }
+            else{
+                $("img").animate({bottom:"0px"});	
+            }
+     	};
+     	z+=1;
+     };
+
+   while(z===2){
+     	for(var k=0;k<=82;k++){
+            $(".sample3").show().animate({left:"-=100px"});
+            if(k===2|| k===3||k===4){
+              $("img").animate({bottom:"349px"});
+            }
+            else{
+                $("img").animate({bottom:"0px"});	
+            }
+     	};
+     	z+=1;
+     };
+
+
+});
+</script>
+	<style>
+		html{
+			width:auto;
+		}
+		body{
+			background-image: url("https://images.pexels.com/photos/3464632/pexels-photo-3464632.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+			background-repeat:no-repeat;
+			background-size: 100%;
+		}
+		img{
+			width:10%;
+			bottom: 0px;
+			position: fixed;
+		}
+		.sample{
+			background-color: red;
+			position:fixed;
+			display: none;
+			width:8%;
+			height:100px;
+			left:1200px;
+			bottom: 0px;
+		}
+		.sample2{
+              background-color: red;
+			position:fixed;
+			display: none;
+			width:7%;
+			height:200px;
+			left:3200px;
+			bottom: 0px;
+		}
+		.sample3{
+             background-color: red;
+			position:fixed;
+			display: none;
+			width:15%;
+			height:350px;
+			left:6400px;
+			bottom: 0px;
+		}   
+
+
+</style>
+</head>
+<body>
+     <img src="https://media.giphy.com/media/aCi7hlUqejenhbqNiT/giphy.gif">
+     <p class="sample"></p>
+     <p class="sample2"></p>
+     <p class="sample3"></p>
+
+</body>
+</html>
